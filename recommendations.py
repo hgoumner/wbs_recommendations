@@ -19,7 +19,10 @@ def no_info(col, data, item_id):
 
     movie_missing = movie_names.loc[movie_names['imdbId'] == item_id, 'title']
 
-    col.markdown(movie_missing.iloc[0])
+    title = movie_missing.iloc[0]
+    if ', The' in title:
+        title = 'The ' + title.split(', The')[0]
+    col.markdown(title)
 
 
 def get_most_recent(cols, data, N):
