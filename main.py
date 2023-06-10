@@ -11,7 +11,7 @@ from recommendations import get_recommendations
 
 # Load data
 # --------------------------------------------------------
-data        = pd.read_csv('recommendations/app/full_data.csv')
+data        = pd.read_csv('./full_data.csv')
 item_ids    = list(data['movieId'].unique())
 user_ids    = list(data['userId'].unique())
 movie_names = data.drop_duplicates(subset='title')[['movieId', 'title']]
