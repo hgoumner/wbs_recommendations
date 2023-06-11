@@ -12,13 +12,14 @@ from recommendations import get_recommendations
 # Load data
 # --------------------------------------------------------
 data        = pd.read_csv('./full_data.csv')
+names       = pd.read_csv('./famous.csv')
 item_ids    = list(data['movieId'].unique())
 user_ids    = list(data['userId'].unique())
 movie_names = data.drop_duplicates(subset='title')[['movieId', 'title']]
 
 # sidebar
 # --------------------------------------------------------
-N, movie_name, item_id, user_id = make_sidebar(movie_names, item_ids, user_ids)
+N, movie_name, item_id, user_id = make_sidebar(names, movie_names, item_ids, user_ids)
 
 # Get recommendations
 # --------------------------------------------------------

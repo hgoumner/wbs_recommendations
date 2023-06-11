@@ -76,7 +76,7 @@ def user_user_recommender(data, N, user_id):
     rec_movies['finet'] = rec_movies['score'] * rec_movies['Weight']
 
     rec_movies_sorted = rec_movies.sort_values('finet', ascending=False)
-    rec_movies_sorted = rec_movies_sorted[['title', 'genres', 'imdbId']]
+    rec_movies_sorted = rec_movies_sorted[['title', 'genres', 'imdbId', 'tmdbId']]
 
     rec_movies_sorted.drop_duplicates(subset='title', inplace=True)
 

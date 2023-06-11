@@ -14,7 +14,7 @@ def most_recent(data, N):
     return data.head(N)
 
 
-def most_trending(data, N, time_period):
+def most_trending(data, N, time_period=10):
     ''' get N most trending movies within last time_period years'''
 
     data = data.copy()
