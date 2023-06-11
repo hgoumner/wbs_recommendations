@@ -50,7 +50,8 @@ def get_movie_recommendations(cols, data, N, func, database, user_id, item_id):
             col.markdown(f''' <a href={movies_url}><img src="{movies_image_url}" style="width:120px" ></a> ''', unsafe_allow_html=True)
             col.write(f'{title(data, movies.iloc[index])}')
         else:
-            col.markdown(f''' <a><img src="{NF_IMAGE}" style="width:120px" ></a> ''', unsafe_allow_html=True)
+            # col.markdown(f''' <a><img src="{NF_IMAGE}" style="width:120px" ></a> ''', unsafe_allow_html=True)
+            col.image('./not_found.jpg', use_column_width='always')
             col.write(f'{title(data, movies.iloc[index])}')
 
 
