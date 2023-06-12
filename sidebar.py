@@ -11,7 +11,7 @@ def make_sidebar(names, movie_names, item_ids, user_ids):
         item_id    = movie_names.loc[movie_names.loc[movie_names['title'] == movie_name, 'movieId'].index[0], 'movieId']
 
         # user id
-        user_name = st.selectbox('Enter user name', options=names['name'])
+        user_name = st.selectbox('Enter reference name', options=names['name'])
         user_id   = names.loc[names.loc[names['name'] == user_name, 'userId'].index[0], 'userId']
 
     return N, movie_name, item_id, user_id
