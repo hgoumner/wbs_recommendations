@@ -8,7 +8,7 @@ HEADER = {'Accept-Language': 'en-US,en;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; 
 def get_imdb_cover_image_url(imdbId):
     ''' get cover image of given movie '''
 
-    url = f'https://www.imdb.com/title/tt{str(imdbId).zfill(3)}/'
+    url = f'https://www.imdb.com/title/tt{str(imdbId).zfill(7)}/'
 
     response = get(url, headers=HEADER)
 
