@@ -13,6 +13,7 @@ from recommendations import get_recommendations
 # --------------------------------------------------------
 data        = pd.read_csv('./full_data.csv')
 names       = pd.read_csv('./famous.csv')
+names       = names.sort_values(by='name', ascending=True)
 item_ids    = list(data['movieId'].unique())
 user_ids    = list(data['userId'].unique())
 movie_names = data.drop_duplicates(subset='title')[['movieId', 'title']]
