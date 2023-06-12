@@ -17,6 +17,7 @@ names       = names.sort_values(by='name', ascending=True)
 item_ids    = list(data['movieId'].unique())
 user_ids    = list(data['userId'].unique())
 movie_names = data.drop_duplicates(subset='title')[['movieId', 'title']]
+movie_names = movie_names.sort_values(by='title', ascending=True)
 
 # sidebar
 # --------------------------------------------------------
